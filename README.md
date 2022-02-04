@@ -7,7 +7,7 @@ Minimum Number to Guess: adore 2
 
 ## UI
 <img width="500" alt="Screen Shot 2022-02-04 at 4 58 32 PM" src="https://user-images.githubusercontent.com/65412039/152570584-2897fa2d-6431-4f21-ad1a-41a68d2cad5b.png">
-Make sure to press the ? icon to use the algorithm to gain a helping hand! This algorithm does NOT have access to the solution. It is giving the best next word that fits the given criteria.
+Use your keyboard to type guesses into the application. Press enter to guess. Make sure to press the ? icon to use the algorithm to gain a helping hand! This algorithm does NOT have access to the solution. It is giving the best next word that fits the given criteria.
 
 
 ## 100 Examples Using Only the Algorithm
