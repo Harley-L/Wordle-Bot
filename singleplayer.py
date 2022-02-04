@@ -4,6 +4,8 @@ from Conditions import update_conditions, compare_exact, check_wrong_spot, lette
 import string
 
 
+# Description: Open up the Wordle possible words and answers and pick one randomly
+# Returns: a random solution and a list of all of the allowed words - string, list of strings
 def choose_random_word():
     # Read in words
     all_answers, allowed_words = read_data()
@@ -28,6 +30,7 @@ def read_data():
     return all_answers, word_values
 
 
+# Description: Find and guess the best next word for the Wordle by sorting through the past conditions
 def machine_guess(grid):
     if not grid.done:
         allowed_words = grid.allowed_words

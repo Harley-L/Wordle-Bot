@@ -7,6 +7,9 @@ lastKey = None  # last key pressed
 grid = None
 
 
+# Description: Homepage of the Wordle
+# x: width of window - int
+# y: height of window - int
 class HomePage(Frame):
     def __init__(self, x, y):
         super().__init__()
@@ -144,6 +147,8 @@ class HomePage(Frame):
         self.pack(fill=BOTH, expand=True)
 
 
+# Description: Manages keystrokes
+# event: type of keystroke - string
 def key_in(event):
     global grid
     if event.keysym == event.char:
@@ -158,7 +163,7 @@ def key_in(event):
         grid.enter()
 
 
-
+# Description: Main function to initialize Tkinter window
 if __name__ == "__main__":
     window = Tk()
     window.title("WORDLE 2.0")
