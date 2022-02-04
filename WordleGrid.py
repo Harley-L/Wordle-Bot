@@ -133,7 +133,9 @@ class WordleGrid:
     def helper_guess(self, given_word):
         self.word = given_word
         self.hints += 1
-        self.enter()
+        self.col = 5
+        for i, char in enumerate(self.word):
+            change_tile(self.letter_frames, i, self.row, self.word[i], 'black')
 
     # Description: Check if a word is allowed to be guessed
     # Returns: word allowed to be guessed? - bool
