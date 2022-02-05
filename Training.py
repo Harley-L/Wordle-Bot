@@ -20,7 +20,9 @@ def read_training_data():
 
 
 # Description: Create a text file with all words and their associated score
-def train():
+# green_score: score associated with a green tile - int
+# yellow_score: score associated with a yellow tile - int
+def train(green_score, yellow_score):
     # Read in the training data
     all_words, all_answers = read_training_data()
 
@@ -32,8 +34,8 @@ def train():
         print("\b" * 20 + str(i) + "/" + all_words_len, end="")
         # test against each possible solution
         for sol in all_answers:
-            all_words[test] += score(test, sol)
-    print("\b" * 20 + "DONE")
+            all_words[test] += score(test, sol, green_score, yellow_score)
+    print("\b" * 20 + "Training Done")
 
     # Sort the dictionary by value
     sorted_aw = dict(sorted(all_words.items(), key=lambda item: item[1], reverse=True))
@@ -47,13 +49,15 @@ def train():
 # Description: scores how valuable a word is depending on the # of exact matches/letter in the word
 # guess: a word - string
 # solution: a word to compare against - string
+# green_score: score associated with a green tile - int
+# yellow_score: score associated with a yellow tile - int
 # Return: the associated score - int
-def score(guess, solution):
+def score(guess, solution, green_score, yellow_score):
     score = 0
     str = give_conditions(guess, solution)
     for char in str:
         if char == 'G':
-            score += 2
+            score += green_score
         elif char == 'Y':
-            score += 1
+            score += yellow_score
     return score

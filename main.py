@@ -1,10 +1,12 @@
 from Conditions import give_conditions, update_conditions, compare_exact, check_wrong_spot, letters_ok, check_multiples
 from HelperFunctions import split, print_statistics
 import string
+from Training import train
 
 
 # Description: Main function
 def main():
+    train(2.5, 1)
     # Read in words
     all_answers, word_values = read_data()
 
@@ -14,7 +16,7 @@ def main():
         list.append(daily_wordle(all_answers, word_values, i))
 
     # Print out statistics
-    print_statistics(list, 100)
+    print_statistics(list, 5)
 
 
 # Description: One iteration of the daily WORDLE (from picking solution to guessing it correctly)
