@@ -1,7 +1,7 @@
 # Wordle-Bot
 A Wordle game and solver built in one! Play a game of Wordle and if you need help, use the ? icon to help yourself along!
 
-Average Guess: 4.54
+Average Guess: 4.52
 Maximum Number to Guess: cover 11
 Minimum Number to Guess: adore 2
 
