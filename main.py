@@ -137,5 +137,5 @@ def update_words(words, correct_placement, incorrect_placement, allowed_alpha, n
         temp.append(word)
     return temp
 
-
-main()
+if __name__ == "__main__":
+    main()
